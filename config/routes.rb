@@ -1,4 +1,10 @@
 R1sdkmonitor::Application.routes.draw do
+
+  get "sdk_monitor/index"
+
+  root :to => 'sdk_monitor#index'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
