@@ -1,0 +1,12 @@
+<% @result.each do |res| %>
+
+<div class="test">
+	<% if res[1]=="200" %>
+		<span class="test_success"><%= res[1] %></span> <%= res[0] %>
+	<% else %>
+		<span class="test_fail"><%= res[1] %></span> <%= res[0] %>
+	<% end %>
+</div>
+
+<% end %>
+

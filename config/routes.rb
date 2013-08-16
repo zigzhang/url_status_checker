@@ -1,6 +1,7 @@
 R1sdkmonitor::Application.routes.draw do
 
   get "sdk_monitor/index"
+  get "sdk_monitor/test"
 
   root :to => 'sdk_monitor#index'
 
