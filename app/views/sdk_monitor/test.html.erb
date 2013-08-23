@@ -1,12 +1,48 @@
-<% @result.each do |res| %>
+<table>
+	<thead>
+		<td>URL</td>
+		<td>STG URL</td>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<ul id="url_list" class="test"></ul>
+			</td>
+			<td>
+				<ul id="url_list_stg" class="test"></ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<script>
+	var url_list = new Array();	
 
-<div class="test">
-	<% if res[1]=="200" %>
-		<span class="test_success"><%= res[1] %></span> <%= res[0] %>
-	<% else %>
-		<span class="test_fail"><%= res[1] %></span> <%= res[0] %>
+	<% @url_list.each do |url| %>
+		var url = "<%= url %>";
+		url_list.push(url);
+
+		var url_analyse = url.split("/");
+		url_analyse[2]="api.r1sdk-stg.com";
+		url_list.push(url_analyse.join("/"));
 	<% end %>
-</div>
+	var n = url_list.length;
+	for(var i=0;i<n;i++) { 
+		if(url_list[i].indexOf(".json") != -1) {
+			url_list.push(url_list[i]+"&density=1");
+			url_list.push(url_list[i]+"&density=1.5");
+			url_list.push(url_list[i]+"&density=2");
+			url_list.push(url_list[i]+"&density=3");
+			url_list.push(url_list[i]+"&density=4");
+		}
+	};
 
-<% end %>
+	var n = url_list.length;
 
+	for(var i=0;i<n;i++) { 
+		if(url_list[i].indexOf(".json") != -1) {
+			url_list.push(url_list[i]+"&locale=en_US");
+			url_list.push(url_list[i]+"&locale=zh_SH");
+		}
+	};
+
+</script>
