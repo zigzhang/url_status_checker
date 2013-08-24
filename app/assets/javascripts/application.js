@@ -41,7 +41,7 @@ $(document).ready(function() {
 		  			result.innerHTML = "<div class='test_fail status'>" + data.result[1] + "</div><div class='url'>" + data.result[0] + "</div>";
 		  		}
 		  		if(data.result[0].indexOf("-stg.com") != -1) {
-		  			if(data.result[0].indexOf("&locale=") != -1){
+		  			if(data.result[0].indexOf("&language=") != -1){
 		  				url_list_stg_locale.appendChild(result);
 		  			}
 		  			else if(data.result[0].indexOf("&density=") != -1){
@@ -52,7 +52,7 @@ $(document).ready(function() {
 		  			}
 		  		}
 		  		else{
-		  			if(data.result[0].indexOf("&locale=") != -1){
+		  			if(data.result[0].indexOf("&language=") != -1){
 		  				url_list_locale.appendChild(result);
 		  			}
 		  			else if(data.result[0].indexOf("&density=") != -1){
