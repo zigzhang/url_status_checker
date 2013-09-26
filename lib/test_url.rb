@@ -8,7 +8,6 @@ module TestUrl
 
 	  test = http.code
 
-
 	  return test
   end
 
