@@ -22,262 +22,37 @@
                 line-height: 20px;
             }
 
-            .status {
-                display: inline-block;
-            }
-
             .url {
-                display: inline-block;
-                vertical-align: middle;
-                width: 85%;
                 margin-left: 10px;
             }
 
-
-            tbody td {
-                vertical-align: top;
-                width: 50%;
+            .test_badge {
+				color: #ffffff;
+				padding: 5px 10px;
+				text-align: center;
+				-webkit-border-radius: 10px;
+				    -moz-border-radius: 10px;
+				        border-radius: 10px;  
             }
 
-            thead td {
-                text-align: center;
-                text-decoration: underline;
-                font-size: 1.5em;
-                width: 50%;
-            }
-
- 			.test_success {
-				  color: #ffffff;
-				  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-				  background-color: #5bb75b;
-				  *background-color: #51a351;
-				  border-color: #51a351 #51a351 #387038;
-				  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
- 				  padding: 5px;
-				  -webkit-border-radius: 10px;
-				     -moz-border-radius: 10px;
-				          border-radius: 10px;				  
+ 			.success {
+				background-color: #5bb75b;
+				*background-color: #51a351;
+				border-color: #51a351 #51a351 #387038;
+				border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+ 								  
  			}
 
- 			.test_fail {
-				  color: #ffffff;
-				  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-				  background-color: #da4f49;
-				  *background-color: #bd362f;
-				  border-color: #bd362f #bd362f #802420;
-				  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
- 				  padding: 5px;
-				  -webkit-border-radius: 10px;
-				     -moz-border-radius: 10px;
-				          border-radius: 10px;	
+ 			.warning {
+  				background-color: #faa732;
+  				*background-color: #f89406;
+  				border-color: #f89406 #f89406 #ad6704;
+  				border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);			  
  			}
 
-            
-            body {
-                margin: 0;
-                margin-bottom: 25px;
-                padding: 0;
-                background-color: #f0f0f0;
-                font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-                font-size: 13px;
-                color: #333;
-            }
-
-            h1 {
-                font-size: 28px;
-                color: #000;
-            }
-
-            a  {color: #03c}
-            a:hover {
-                background-color: #03c;
-                color: white;
-                text-decoration: none;
-            }
-
-
-            #page {
-                background-color: #f0f0f0;
-                width: 750px;
-                margin: 0;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            #content {
-                float: left;
-                background-color: white;
-                border: 3px solid #aaa;
-                border-top: none;
-                padding: 25px;
-                width: 500px;
-            }
-
-            #sidebar {
-                float: right;
-                width: 175px;
-            }
-
-            #footer {
-                clear: both;
-            }
-
-            #header, #about, #getting-started {
-                padding-left: 75px;
-                padding-right: 30px;
-            }
-
-
-            #header {
-                background-image: url("assets/rails.png");
-                background-repeat: no-repeat;
-                background-position: top left;
-                height: 64px;
-            }
-            #header h1, #header h2 {margin: 0}
-            #header h2 {
-                color: #888;
-                font-weight: normal;
-                font-size: 16px;
-            }
-
-
-            #about h3 {
-                margin: 0;
-                margin-bottom: 10px;
-                font-size: 14px;
-            }
-
-            #about-content {
-                background-color: #ffd;
-                border: 1px solid #fc0;
-                margin-left: -55px;
-                margin-right: -10px;
-            }
-            #about-content table {
-                margin-top: 10px;
-                margin-bottom: 10px;
-                font-size: 11px;
-                border-collapse: collapse;
-            }
-            #about-content td {
-                padding: 10px;
-                padding-top: 3px;
-                padding-bottom: 3px;
-            }
-            #about-content td.name  {color: #555}
-            #about-content td.value {color: #000}
-
-            #about-content ul {
-                padding: 0;
-                list-style-type: none;
-            }
-
-            #about-content.failure {
-                background-color: #fcc;
-                border: 1px solid #f00;
-            }
-            #about-content.failure p {
-                margin: 0;
-                padding: 10px;
-            }
-
-
-            #getting-started {
-                border-top: 1px solid #ccc;
-                margin-top: 25px;
-                padding-top: 15px;
-            }
-            #getting-started h1 {
-                margin: 0;
-                font-size: 20px;
-            }
-            #getting-started h2 {
-                margin: 0;
-                font-size: 14px;
-                font-weight: normal;
-                color: #333;
-                margin-bottom: 25px;
-            }
-            #getting-started ol {
-                margin-left: 0;
-                padding-left: 0;
-            }
-            #getting-started li {
-                font-size: 18px;
-                color: #888;
-                margin-bottom: 25px;
-            }
-            #getting-started li h2 {
-                margin: 0;
-                font-weight: normal;
-                font-size: 18px;
-                color: #333;
-            }
-            #getting-started li p {
-                color: #555;
-                font-size: 13px;
-            }
-
-
-            #sidebar ul {
-                margin-left: 0;
-                padding-left: 0;
-            }
-            #sidebar ul h3 {
-                margin-top: 25px;
-                font-size: 16px;
-                padding-bottom: 10px;
-                border-bottom: 1px solid #ccc;
-            }
-            #sidebar li {
-                list-style-type: none;
-            }
-            #sidebar ul.links li {
-                margin-bottom: 5px;
-            }
-
-            .filename {
-                font-style: italic;
-            }
-            .table{
-                margin: 10px;
-            }
-            .cell{
-                padding:7px 0px;
-                display:inline-block;
-            }
-            
-            .cell .chart{
-                width    : 480px;
-                height   : 190px;
-                overflow : hidden;
-                position : relative;
-                padding: 7.5px;
-            }
-            .cell iframe {
-                position : absolute;
-                top      : -40px;
-                left     : 0px;
-                width    : 480px;
-                height    : 280px;
-            }
-            .cell .chart-title{
-                font-size: 18px;
-                padding-bottom: 10px;
-            }
-
-            .cell .chart.column_4 {
-                width   :360px;
-            }
-
-            .cell .chart.column_4 > iframe {
-                width   :360px;
-            }
-
-            .cell .chart.column_3{
-                width    : 510px;
-            }
-            .cell .chart.column_3 iframe {
-                width    : 510px;
-            }
+ 			.fail {
+				background-color: #da4f49;
+  				*background-color: #bd362f;
+  				border-color: #bd362f #bd362f #802420;
+  				border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+ 			}

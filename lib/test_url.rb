@@ -6,14 +6,8 @@ module TestUrl
   	  uri = URI(uri_str)
 	  http = Net::HTTP.get_response(uri) # => String
 
-	  case http
-	  when Net::HTTPSuccess then
-	    test = http.code
-	  when Net::HTTPRedirection then
-	    test = "Redirected"
-	  else
-	    test = http.code
-	  end
+	  test = http.code
+
 
 	  return test
   end

@@ -28,40 +28,18 @@ $(document).ready(function() {
 			data: {url: url},
 		  	success: function(data, textStatus, xhr) {
 		  		var url_list = document.getElementById('url_list');
-		  		var url_list_density = document.getElementById('url_list_density');
-		  		var url_list_locale = document.getElementById('url_list_locale');
-		  		var url_list_stg = document.getElementById('url_list_stg');
-		  		var url_list_stg_density = document.getElementById('url_list_stg_density');
-		  		var url_list_stg_lcale = document.getElementById('url_list_stg_locale');
 		  		var result = document.createElement('li');
 		  		if(data.result[1]==200){
-		  			result.innerHTML = "<div class='test_success status'>" + data.result[1] + "</div><div class='url'>" + data.result[0] + "</div>";
+		  			result.innerHTML = "<span class='test_badge success'>" + data.result[1] + "</span><span class='url'>" + data.result[0] + "</span>";
 		  		}
-		  		else {
-		  			result.innerHTML = "<div class='test_fail status'>" + data.result[1] + "</div><div class='url'>" + data.result[0] + "</div>";
-		  		}
-		  		if(data.result[0].indexOf("-stg.com") != -1) {
-		  			if(data.result[0].indexOf("&language=") != -1){
-		  				url_list_stg_locale.appendChild(result);
-		  			}
-		  			else if(data.result[0].indexOf("&density=") != -1){
-		  				url_list_stg_density.appendChild(result);
-		  			}
-		  			else{
-		  				url_list_stg.appendChild(result);
-		  			}
+		  		else if(data.result[1]==301 || data.result[1]==302){
+		  			result.innerHTML = "<span class='test_badge warning'>" + data.result[1] + "</span><span class='url'>" + data.result[0] + "</span>";
 		  		}
 		  		else{
-		  			if(data.result[0].indexOf("&language=") != -1){
-		  				url_list_locale.appendChild(result);
-		  			}
-		  			else if(data.result[0].indexOf("&density=") != -1){
-		  				url_list_density.appendChild(result);
-		  			}
-		  			else{
-		  				url_list.appendChild(result);
-		  			}
+		  			result.innerHTML = "<span class='test_badge fail'>" + data.result[1] + "</span><span class='url'>" + data.result[0] + "</span>";
 		  		}
+
+		  		url_list.appendChild(result);
 		  	},
 		  	error: function(result) {
 		  		return false;

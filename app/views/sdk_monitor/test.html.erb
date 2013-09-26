@@ -1,51 +1,6 @@
-<table>
-	<thead>
-		<td>URL</td>
-		<td>STG URL</td>
-	</thead>
-	<tbody>
-		<tr>
-			<td>
-				<ul id="url_list" class="test"></ul>
-			</td>
-			<td>
-				<ul id="url_list_stg" class="test"></ul>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<table>
-	<thead>
-		<td>DENSITY URL</td>
-		<td>DENSITY STG URL</td>
-	</thead>
-	<tbody>
-		<tr>
-			<td>
-				<ul id="url_list_density" class="test"></ul>
-			</td>
-			<td>
-				<ul id="url_list_stg_density" class="test"></ul>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<table>
-	<thead>
-		<td>LOCALE URL</td>
-		<td>LOCALE STG URL</td>
-	</thead>
-	<tbody>
-		<tr>
-			<td>
-				<ul id="url_list_locale" class="test"></ul>
-			</td>
-			<td>
-				<ul id="url_list_stg_locale" class="test"></ul>
-			</td>
-		</tr>
-	</tbody>
-</table>
+<h1>URL Status Checker</h1>
+<ul id="url_list" class="test"></ul>
+
 <script>
 	var url_list = new Array();	
 
@@ -53,28 +8,10 @@
 		var url = "<%= url %>";
 		url_list.push(url);
 
-		var url_analyse = url.split("/");
-		url_analyse[2]="api.r1sdk-stg.com";
-		url_list.push(url_analyse.join("/"));
+		<%-# We can manipulate the core urls here %>
+		url = url + "inexistant_article"
+		url_list.push(url);
 	<% end %>
-	var n = url_list.length;
-	for(var i=0;i<n;i++) { 
-		if(url_list[i].indexOf(".json") != -1) {
-			url_list.push(url_list[i]+"&density=1");
-			url_list.push(url_list[i]+"&density=1.5");
-			url_list.push(url_list[i]+"&density=2");
-			url_list.push(url_list[i]+"&density=3");
-			url_list.push(url_list[i]+"&density=4");
-		}
-	};
 
-	var n = url_list.length;
-
-	for(var i=0;i<n;i++) { 
-		if(url_list[i].indexOf(".json") != -1) {
-			url_list.push(url_list[i]+"&language=en_US");
-			url_list.push(url_list[i]+"&language=zh_SH");
-		}
-	};
 
 </script>
